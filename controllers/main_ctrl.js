@@ -128,6 +128,7 @@ const addSkills = (req, res, next) => {
 		res.status(418).json({err: "Please Enter Skills"});
 	} else {
 		let id = skills.length+1;
+		req.body.id = id;
 		skills.push(req.body);
 		res.json(skills);
 	}
